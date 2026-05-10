@@ -1,10 +1,23 @@
-// Home.js
+// pages/Home.jsx
+
+import "./Home.css";
 
 function Home() {
   return (
-    <div>
-      <h1>Welcome to Code Snippet App</h1>
-      <p>Store and manage your code snippets easily.</p>
+    <div className="home">
+
+      <div className="hero">
+
+        <h1>Welcome to SnippetHub</h1>
+
+        <p>
+          Store, manage and share your code snippets easily.
+        </p>
+
+        <button>Explore Snippets</button>
+
+      </div>
+
     </div>
   );
 }
