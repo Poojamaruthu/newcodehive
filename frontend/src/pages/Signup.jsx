@@ -29,7 +29,7 @@ const Signup = () => {
     alert("Signup successful");
 
     // go to home (NOT login)
-    navigate("/");
+    navigate("/login");
 
   } catch (error) {
     alert(error.response?.data?.message || "Signup failed");
