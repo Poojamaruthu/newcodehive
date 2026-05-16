@@ -1,9 +1,12 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
 }
 
-body{
-  padding-top:90px;
+body {
+  margin: 0;
+  padding-top: 80px;
+  background-color: #ffffff;
 }

@@ -1,37 +1,221 @@
-.home{
-  min-height:90vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#f5f5f5;
+/* ── BASE ── */
+.home {
+  background: #ffffff;
+  color: #111;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.hero{
-  text-align:center;
+/* ━━━━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━━━━ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 40px 80px;
+  background: #ffffff;
+  gap: 20px;
 }
 
-.hero h1{
-  font-size:50px;
-  margin-bottom:20px;
-  color:#222;
+.hero-badge {
+  display: inline-block;
+  background: #e8f4fd;
+  border: 1px solid #b8dcf0;
+  color: #1a6fa8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
 }
 
-.hero p{
-  font-size:20px;
-  margin-bottom:25px;
-  color:#555;
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #0a1628;
+  line-height: 1.2;
+  max-width: 650px;
+  letter-spacing: -0.5px;
 }
 
-.hero button{
-  padding:12px 24px;
-  border:none;
-  background:black;
-  color:white;
-  font-size:16px;
-  cursor:pointer;
-  border-radius:8px;
+.hero-accent {
+  color: #1a6fa8;
 }
 
-.hero button:hover{
-  opacity:0.8;
+.hero p {
+  font-size: 17px;
+  color: #5a7a95;
+  max-width: 500px;
+  line-height: 1.75;
+}
+
+/* ── BUTTONS ── */
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #0d2b4e, #1a6fa8);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 16px rgba(13, 43, 78, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0a1f3c, #0d5a8e);
+  box-shadow: 0 6px 22px rgba(26, 111, 168, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  padding: 13px 30px;
+  background: transparent;
+  color: #1a6fa8;
+  border: 1.5px solid #1a6fa8;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: #e8f4fd;
+  transform: translateY(-2px);
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   FEATURES
+━━━━━━━━━━━━━━━━━ */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 60px 80px;
+  background: #f5faff;
+  border-top: 1px solid #dceefa;
+  border-bottom: 1px solid #dceefa;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #d0e9f7;
+  border-radius: 14px;
+  padding: 32px 26px;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.feature-card:hover {
+  border-color: #1a6fa8;
+  box-shadow: 0 6px 22px rgba(26, 111, 168, 0.1);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #5a7a95;
+  line-height: 1.7;
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   CTA BANNER
+━━━━━━━━━━━━━━━━━ */
+.cta-banner {
+  text-align: center;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2b4e 55%, #0a3d6b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-banner h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #e0f4ff;
+}
+
+.cta-banner p {
+  font-size: 16px;
+  color: #a8d8f0;
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   TABLET
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 40px;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   MOBILE
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 480px) {
+  .hero {
+    padding: 70px 24px 60px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .cta-banner {
+    padding: 60px 24px;
+  }
+
+  .cta-banner h2 {
+    font-size: 24px;
+  }
 }

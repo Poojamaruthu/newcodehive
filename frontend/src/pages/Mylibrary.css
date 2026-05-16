@@ -1,0 +1,222 @@
+/* ── BASE ── */
+.library-container {
+  padding: 40px 60px;
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── SECTION HEADINGS ── */
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0a1628;
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dceefa;
+}
+
+/* ── GRID ── */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+/* ── CARD ── */
+.card {
+  width: 420px;
+  height: 550px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #d0e9f7;
+  border-radius: 14px;
+  padding: 24px;
+  gap: 10px;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 12px rgba(26, 111, 168, 0.07);
+}
+
+.card:hover {
+  border-color: #1a6fa8;
+  box-shadow: 0 6px 22px rgba(26, 111, 168, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── CARD TITLE ── */
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 6px;
+  flex-shrink: 0;
+}
+
+/* ── LANGUAGE LABEL ── */
+.card p {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1a6fa8;
+  background: #e8f4fd;
+  border: 1px solid #b8dcf0;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* ── CODE BLOCK ── */
+pre {
+  background: #0a1628;
+  color: #7dd4f8;
+  padding: 14px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.7;
+  font-family: 'Courier New', monospace;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  white-space: pre;
+  word-break: normal;
+  text-align: left;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── EDIT INPUTS ── */
+.card input[type="text"],
+.card textarea {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  border: 1.5px solid #d0e9f7;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0a1628;
+  background: #f5faff;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.card input[type="text"]:focus,
+.card textarea:focus {
+  border-color: #1a6fa8;
+  box-shadow: 0 0 0 3px rgba(26, 111, 168, 0.1);
+}
+
+.card textarea {
+  min-height: 110px;
+  resize: vertical;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── BUTTONS ROW ── */
+.btns {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── BASE BUTTON ── */
+button {
+  padding: 8px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.22s ease;
+}
+
+/* ── EDIT / SAVE BUTTON ── */
+.btns button:not(.delete),
+.card > button:not(.delete) {
+  background: linear-gradient(135deg, #0d2b4e, #1a6fa8);
+  color: #ffffff;
+  box-shadow: 0 3px 12px rgba(13, 43, 78, 0.2);
+}
+
+.btns button:not(.delete):hover,
+.card > button:not(.delete):hover {
+  background: linear-gradient(135deg, #0a1f3c, #0d5a8e);
+  box-shadow: 0 5px 16px rgba(26, 111, 168, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ── DELETE / REMOVE BUTTON ── */
+.delete {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1.5px solid #f5c6c6;
+}
+
+.delete:hover {
+  background: #fde0e0;
+  border-color: #e74c3c;
+  transform: translateY(-1px);
+}
+
+/* ── META ── */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 8px 0 4px;
+  border-top: 1px solid #dceefa;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.meta span {
+  color: #0a2540;
+  font-weight: 500;
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   TABLET
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 768px) {
+  .library-container {
+    padding: 30px 30px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   MOBILE
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 480px) {
+  .library-container {
+    padding: 24px 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .btns button {
+    width: 100%;
+  }
+}

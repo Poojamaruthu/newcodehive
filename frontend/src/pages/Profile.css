@@ -1,0 +1,195 @@
+/* ── BASE ── */
+.profile-container {
+  padding: 40px 60px;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── PROFILE CARD ── */
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #d0e9f7;
+  border-radius: 16px;
+  padding: 40px 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(26, 111, 168, 0.08);
+}
+
+/* ── AVATAR ── */
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0d2b4e, #1a6fa8);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(26, 111, 168, 0.35);
+}
+
+/* ── USERNAME ── */
+.profile-card h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0a1628;
+  margin-bottom: 6px;
+}
+
+/* ── EMAIL ── */
+.profile-card > p {
+  font-size: 14px;
+  color: #5a7a95;
+}
+
+/* ── STATS ── */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #dceefa;
+}
+
+.stats div h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0a3d6b;
+  line-height: 1;
+}
+
+.stats div p {
+  font-size: 13px;
+  color: #5a7a95;
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── JOINED ── */
+.joined {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #90b4cc;
+}
+
+/* ── SECTION HEADING ── */
+.profile-container h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a1628;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dceefa;
+}
+
+/* ── SNIPPET GRID ── */
+.snippet-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+/* ── SNIPPET CARD ── */
+.snippet-card {
+  width: 420px;
+  height: 550px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #d0e9f7;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 12px rgba(26, 111, 168, 0.07);
+}
+
+.snippet-card:hover {
+  border-color: #1a6fa8;
+  box-shadow: 0 6px 22px rgba(26, 111, 168, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── SNIPPET TITLE ── */
+.snippet-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a1628;
+}
+
+/* ── LANGUAGE BADGE ── */
+.snippet-card p {
+  display: inline-block;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1a6fa8;
+  background: #e8f4fd;
+  border: 1px solid #b8dcf0;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* ── CODE BLOCK ── */
+pre {
+  background: #0a1628;
+  color: #7dd4f8;
+  padding: 14px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.7;
+  font-family: 'Courier New', monospace;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  white-space: pre;
+  text-align: left;
+  flex: 1;
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   TABLET
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 30px 30px;
+  }
+
+  .snippet-card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━
+   MOBILE
+━━━━━━━━━━━━━━━━━ */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 24px 16px;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+
+  .snippet-grid {
+    flex-direction: column;
+  }
+
+  .snippet-card {
+    width: 100%;
+    height: auto;
+  }
+}
