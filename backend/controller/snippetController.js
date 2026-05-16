@@ -1,7 +1,7 @@
 // controllers/snippetController.js
 
 import Snippet from "../models/Snippet.js";
-import User from "../models/User.js";
+import User from "../models/user.js";
 
 
 // CREATE SNIPPET
